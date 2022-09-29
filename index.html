@@ -62,12 +62,72 @@
                 <div class="modal" >
                     <button type="button" class="modal-btn" data-modal-close>
                      <svg class="modal-svg">
-                        <use href="./img/sprite2.svg#close-black" >
-
-                        </use>
+                        <use href="./img/sprite2.svg#close-black" ></use>
                      </svg>
-                    </button>   
+                    </button>
+                    
+                    <form class="form-group">
+                    
+                    <p class="modal-p">Залиште свої дані, ми вам передзвонимо</p>
+                    
+                    <div class="box-input">
+                        <div class="lebal-box">
+                            <label for="name"> Імя</label>
+                            <input type="text" name="name" id="name" class="class-input" required>
+                        </div>
+                        <div class="focus-box">
+                            <svg class="svg-box">
+                              <use href="./img/icons.svg#people" ></use>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                   
+                    <div class="box-input">
+                        <label for="tel">Телефон</label>
+                        <div class="lebal-box">
+                           <input type="text" name="name" id="tel" class="class-input" required>
+                        </div>
+                        <div class="focus-box">
+                            <svg class="svg-box">
+                               <use href="./img/icons.svg#tel"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="box-input">
+                        <div class="lebal-box">
+                          <label for="post">Пошта</label>
+                          <input type="text" name="name" id="post" class="class-input" required>
+                        </div>
+                        <div class="focus-box">
+                           <svg class="svg-box">
+                             <use href="./img/icons.svg#envelo"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    
 
+                    <div class="box-input">
+                    <label for="textarea">Коментар</label>
+                    <textarea name="Coment" cols="30" rows="10" id="textarea" class="textarea-coment"
+                    placeholder="Введіть текст"></textarea>
+                    </div>
+   
+                    
+                     <label  class="label-check">
+                       <input type="checkbox" class="checkbox" >
+                       <span class="span-box"> </span>
+                       <div class="text-check">
+                        Погоджуюся з розсилкою та приймаю <a href="" class="checkbox-a">Умови доровору</a> 
+                       </div>
+                        
+                    </label>
+                   
+                    
+                    <button type="submit" class="btn-send">Відправити</button>
+                    
+                    </form>
                 </div>
             </div>
         </div>
@@ -415,9 +475,30 @@
             </ul>
         </div>    
         
+        <div class="footer3">
+            
+            <form action="" class="footer-form">
+
+             <div class="flow-input">
+             <label for="email" >Підпишіться на розсилку</label>
+             <input type="email" id="email" placeholder="E-mail" class="foot-input">
+            </div>
+            
+            <div class="flow-foot">
+            <button class="flow-btn"> Підписатися 
+                <svg class="flow-svg">
+                    <use href="./img/ icons.svg#icon"></use>
+                </svg>
+            </button>
+            </div>
+            </form>
+        </div>
+
     </div>
     </footer>  
+
     <script src="./js/modal.js"></script>
+
 </body>
 
 </html>

@@ -255,12 +255,11 @@ color: #188CE8;
         top: 50%;
         left: 50%;
         min-height: 581px;
-        min-width: 521px;
+        min-width: 528px;
         
         background-color: #FFFFFF;
         transform: translate(-50%, -50%);
         
-    
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 4px;}
 
@@ -269,23 +268,175 @@ color: #188CE8;
             display: flex;
             align-items: center;
             justify-content: center;
-            
             width: 30px;
             height: 30px;
             top: 10px;
             right: 10px;
             border-radius: 50%;
             border: 1px solid rgba(0, 0, 0, 0.1);
-            background-color: #FFFFFF;}
+            background-color: #FFFFFF;
+            z-index: 1;
+        cursor: pointer;}
+
+            .modal-btn:hover .modal-svg ,
+            .modal-btn:focus .modal-svg
+            { fill: var(--minor-colour);}
 
         .modal-svg { 
             position: absolute;
             width: 18px;
             height: 18px;
-            fill: #000000;}
+            fill: #000000;
+            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+
+                 
+/*-- ввод даних  */
+
+.form-group { padding: 40px;
+position: relative;}
+
+ .modal-p {
+text-align: center;
+font-weight: 700;
+font-size: 20px;
+line-height: 23px;
+text-align: center;
+letter-spacing: 0.03em;
+color: #212121;
+margin-bottom: 12px;
+}
+
+.box-input{ 
+display: flex;
+flex-direction: column;
+position: relative;
+
+}
+
+.box-input label { 
+    font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: #757575;
+        margin-bottom: 4px;
+}
+    
+.box-input .class-input {
+    
+    width: 100%;
+    max-width: 418px;
+    padding-left: 30px;
+    height: 38px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: border 250ms cubic-bezier(0.4 , 0 , 0.2 , 1);
+    cursor: pointer;
+}
+
+
+
+.box-input .svg-box {
+    position: absolute;
+    top: 38px;
+    left: 14px;
+    transform: translateY(-50%);
+    
+    width: 18px;
+    height: 18px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+
+
+.lebal-box:focus-within + .focus-box {fill: var(--minor-colour); }
+.lebal-box:focus-within .class-input { border-color: var(--minor-colour);}
+
+.lebal-box:hover + .focus-box {fill: var(--minor-colour);}
+.lebal-box:hover .class-input {border-color: var(--minor-colour);}
+
+
+
+
+.textarea-coment {
+    box-sizing: border-box;
+    max-width: 448px;
+    max-height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+ }
+
+ .box-input textarea { 
+    font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+        padding: 12px 16px;
+        outline: none}
+   
+
+
+/*-- нижній рядок  */
+
+.label-check { 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-left: 12px;
+    gap: 10px;
+   
+   font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: #757575;}
+    
+.checkbox:checked + .span-box { 
+    background-color: var(--minor-colour);
+    background-image: url(../img/like.svg);
+    background-size: contain;
+    border-color: var(--minor-colour);}
+        
+
+ .checkbox {
+     appearance: none;
+     position: absolute;}
+  
+.span-box {
+     width: 13px;
+    height: 13px;
+    border: 2px solid #212121;
+    border-radius: 4px;}
+
+.checkbox-a {
+    color: var(--minor-colour);
+    text-decoration: underline;
+}
+
+
+    .btn-send {
+     position: absolute;
+     top: 491px;
+     left: 164px;
+     width: 200px;
+     height: 50px;
+
+
+     background: #2196F3;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+     border-radius: 4px;
+     color: var(--text-wite);
+     border: 0px;
+     cursor: pointer;}
+
 
  
 
+         
   /*-- про нас */
   
 .block-about { 
@@ -303,9 +454,7 @@ padding-top: 25px;
     height: 70px;
 }
   
-  
-
-  .about-us .titel {
+.about-us .titel {
     
     margin-bottom: 10px;
     font-weight: 700;
@@ -753,3 +902,76 @@ font-style: normal;
         .a-communic:focus{background-color: var(--minor-colour);
         }
         .svg-communic {fill: var(--text-wite);}
+
+
+
+        /* footer3 */
+        
+        .footer3 { margin-left: 90px;}
+
+        .footer-form {
+            display: flex;
+            align-items: flex-end;
+           }
+
+        .footer3 .flow-input {
+          display: flex;
+          flex-direction: column;
+          font-weight: 700;
+          gap: 20px;      
+          font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+        }
+
+        .footer3 .foot-input { 
+            width: 342px;
+            height: 46px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: inherit;
+            border-radius: 4px;
+            outline: none;
+            color: var(--text-wite);
+            padding-left: 16px;
+
+        }
+
+        
+        
+
+        .footer3 .flow-btn { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-left: 10px;
+
+
+            background-color: #2196F3 ;
+            width: 200px;
+            height: 50px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            border: none;
+
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 30px;
+            color: var(--text-wite)}
+                
+            
+               
+                
+            
+
+
+       
+       
+
+        .flow-svg { 
+        width: 24px;
+        height: 24px;
+        padding-left: 10px;
+        }
